@@ -1,35 +1,27 @@
-package dev.java10x.CadastroDeNinjas.Missoes;
+package dev.java10x.CadastroDeNinjas.Missoes.Controller;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import dev.java10x.CadastroDeNinjas.Missoes.MissoesRank;
 import dev.java10x.CadastroDeNinjas.Ninja.Controller.NinjaModel;
-import jakarta.persistence.*;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
-@Entity
-@Table(name="tb_missoes")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MissoesModel {
+@SuperBuilder
+public class MissoesDTO {
 
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
-
     private String missionName;
-
-    @Enumerated(EnumType.STRING)
     private MissoesRank missionRank;
-
-    @OneToMany(mappedBy = "missao")
-    @JsonIgnore
     private List<NinjaModel> ninja;
-
 
 }
