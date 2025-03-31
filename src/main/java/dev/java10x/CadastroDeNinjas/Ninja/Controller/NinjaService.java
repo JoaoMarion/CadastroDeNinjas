@@ -55,7 +55,7 @@ public class NinjaService {
             NinjaModel ninjaSalvo = ninjaRepository.save(ninjaAtualizado);
             return ninjaMapper.map(ninjaSalvo);
         }
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Ninja com id " + id + " não foi encontrado.");
+        return null;
     }
 
 }
