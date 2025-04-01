@@ -8,6 +8,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 //  Etity Transforma uma classe em uma entidade do banco de dados
@@ -20,6 +21,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
+@ToString(exclude = "missao")
 public class NinjaModel extends Person {
 
     @Id
@@ -38,10 +40,7 @@ public class NinjaModel extends Person {
 
 
 
-    @Override
-    public String toString(){
-        return "Name : " + name;
-    }
+
 
 
 

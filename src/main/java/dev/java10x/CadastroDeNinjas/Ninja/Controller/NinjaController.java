@@ -13,9 +13,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/ninjas")
+//@CrossOrigin(origins = "http://localhost:3000")
 public class NinjaController {
 
-    private NinjaService ninjaService;
+    private  final NinjaService ninjaService;
 
 
     public NinjaController(NinjaService ninjaService) {

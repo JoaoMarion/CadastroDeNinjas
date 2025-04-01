@@ -1,0 +1,40 @@
+<form id="alterarForm" th:action="@{/ninjas/ui/alterar/{id}(id=${ninja.id})}" method="post"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+    <link rel="stylesheet" th:href="@{/css/alterarNinja.css}">
+
+    <input type="hidden" name="_method" value="PUT" />
+    <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required name="name" th:value="${ninja.name}">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Idade:</label>
+        <input type="number" id="age" required name="age" th:value="${ninja.age}">
+    </div>
+
+    <div class="form-group">
+        <label for="rank">Rank:</label>
+        <select id="rank" required name="rank">
+            <option value="GENIN" th:selected="${ninja.rank == 'GENIN'}">Genin</option>
+            <option value="CHUUNIN" th:selected="${ninja.rank == 'CHUUNIN'}">Chuunin</option>
+            <option value="JOUNNIN" th:selected="${ninja.rank == 'JOUNNIN'}">Jonnin</option>
+            <option value="KAGE" th:selected="${ninja.rank == 'KAGE'}">Kage</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="imgUrl">URL da Imagem:</label>
+        <input type="text" id="imgUrl" name="imgUrl" th:value="${ninja.imgUrl}">
+    </div>
+
+    <div class="form-group">
+        <label for="missionId">ID da Missão:</label>
+        <input type="number" id="missionId" name="missao.id" th:value="${ninja.missao.id}">
+    </div>
+
+    <button type="submit" class="alterar-button">Salvar Alterações</button>
+</form>
+
+
+<a th:href="@{/ninjas/ui/listar}" class="button">Retornar</a>

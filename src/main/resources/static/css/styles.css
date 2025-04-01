@@ -1,0 +1,143 @@
+/* Reset padrão */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Estilização do título */
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Botão de retornar */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo da tabela */
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+table thead {
+    background-color: #0056b3;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efeito Hover */
+tbody tr:hover {
+    background-color: #e2e6ea;
+    transition: background 0.2s ease;
+}
+
+/* Estilização das imagens */
+td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+}
+
+/* Estilização dos botões */
+td a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+td a:nth-child(1) { /* Ver detalhes */
+    background-color: #28a745;
+    color: white;
+}
+
+td a:nth-child(2) { /* Alterar */
+    background-color: #ffc107;
+    color: white;
+}
+
+td a:nth-child(3) { /* Deletar */
+    background-color: #dc3545;
+    color: white;
+}
+
+td a:hover {
+    filter: brightness(85%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    td a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Botão Criar Ninja */
+.create-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(40, 167, 69, 0.3);
+    margin-bottom: 20px;
+}
+
+.create-button:hover {
+    background: linear-gradient(135deg, #1e7e34, #155724);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(40, 167, 69, 0.5);
+}
+

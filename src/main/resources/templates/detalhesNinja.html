@@ -1,0 +1,47 @@
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" th:href="@{/css/detalhesNinja.css}">
+<div class="container">
+    <h1>Detalhes Ninja</h1>
+    <a th:href="@{/ninjas/ui/listar}" class="button">Retornar</a>
+
+    <div class="ninja-info">
+        <div th:each="ninja : ${ninjas}" class="ninja-item">
+            <div class="ninja-row image">
+                <img th:src="${ninja.imgUrl}" width="100" height="100">
+            </div>
+            <div class="ninja-row">
+                <strong>Id:</strong>
+                <span th:text="${ninja.id}"></span>
+            </div>
+            <div class="ninja-row">
+                <strong>Nome:</strong>
+                <span th:text="${ninja.name}"></span>
+            </div>
+            <div class="ninja-row">
+                <strong>Email:</strong>
+                <span th:text="${ninja.email}"></span>
+            </div>
+            <div class="ninja-row">
+                <strong>Idade:</strong>
+                <span th:text="${ninja.age}"></span>
+            </div>
+            <div class="ninja-row">
+                <strong>Rank:</strong>
+                <span th:text="${ninja.rank}"></span>
+            </div>
+            <div class="ninja-row mission">
+                <strong>Missão:</strong>
+                <span th:if="${ninja.missao != null}">
+                        <span th:text="${ninja.missao.missionName}"></span>
+                        <span th:text="${ninja.missao.missionRank}"></span>
+                    </span>
+                <span th:unless="${ninja.missao != null}">Sem Missão</span>
+            </div>
+            <!-- Alterando a tag <a> para aplicar a classe 'alterar-button' -->
+            <div class="ninja-row">
+                <a th:href="@{/ninjas/ui/alterar/{id}(id=${ninja.id})}" class="alterar-button">Alterar</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

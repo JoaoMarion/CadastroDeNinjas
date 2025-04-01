@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Container centralizado */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Estilizando o formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Estilizando os campos do formulário */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #28a745;
+    background-color: #e9f7ec;
+    outline: none;
+}
+
+/* Botão de salvar */
+.alterar-button {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(40, 167, 69, 0.4);
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.alterar-button:hover {
+    background: linear-gradient(135deg, #1e7e34, #155724);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(40, 167, 69, 0.5);
+}
+
+/* Botão Voltar */
+.button {
+    text-decoration: none;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d82);
+    transform: scale(1.05);
+}
+
+/* Exibir mensagem de sucesso */
+.success-message {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Adicionando animação suave no formulário */
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilizando o layout de tela pequena */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+    }
+}
